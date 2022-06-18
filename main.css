@@ -66,6 +66,7 @@ ul {
 }
 .sitenav-link:hover {
     font-weight: bold;
+    color: #000;
 }
 
 .toggle-nav {
