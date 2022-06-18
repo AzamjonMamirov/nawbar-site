@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0;
+    background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)),url(./images/trawl.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.site-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #fff;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    position: relative;
+    z-index: 1000;
+}
+.logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+   
+}
+.site-nav {
+}
+.sitenav-list {
+    display: flex;
+    align-items: center;
+}
+.sitenav-item:not(:last-child) {
+    margin-right: 10px;
+}
+.sitenav-link {
+    color: #fff;
+}
+.sitenav-link:hover {
+    font-weight: bold;
+}
+
+.toggle-nav {
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    display: none;
+    z-index: 60;
+    color: #fff;
+}
+.toggle-nav:active {
+    color: #000;
+}
+.fas {
+}
+.fa-bars {
+}
+.hidden-nav {
+    display: block !important;
+    position: fixed;
+    background-color: rgba(255, 244, 244, 0.228);
+    max-width: 300px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+    z-index: 70;
+}
+.hidden-nav.show-nav{
+    transform: translateX(0);
+}
+.hidden-nav .sitenav-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    gap: 25px;
+    font-size: 1.3rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 440px) {
+    .site-nav {
+        display: none ;
+    }
+
+    .toggle-nav {
+        display: block;
+    }
+}
+
